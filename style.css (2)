@@ -1,0 +1,746 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: initial;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:after, blockquote:before, q:after, q:before {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.nice-form-group {
+  --nf-input-size:1rem;
+  --nf-input-font-size:calc(var(--nf-input-size)*0.875);
+  --nf-small-font-size:calc(var(--nf-input-size)*0.875);
+  --nf-input-font-family:inherit;
+  --nf-label-font-family:inherit;
+  --nf-input-color:#20242f;
+  --nf-input-border-radius:0.25rem;
+  --nf-input-placeholder-color:#929292;
+  --nf-input-border-color:#c0c4c9;
+  --nf-input-border-width:1px;
+  --nf-input-border-style:solid;
+  --nf-input-border-bottom-width:2px;
+  --nf-input-focus-border-color:#3b4ce2;
+  --nf-input-background-color:#f9fafb;
+  --nf-invalid-input-border-color:var(--nf-input-border-color);
+  --nf-invalid-input-background-color:var(--nf-input-background-color);
+  --nf-invalid-input-color:var(--nf-input-color);
+  --nf-valid-input-border-color:var(--nf-input-border-color);
+  --nf-valid-input-background-color:var(--nf-input-background-color);
+  --nf-valid-input-color:inherit;
+  --nf-invalid-input-border-bottom-color:red;
+  --nf-valid-input-border-bottom-color:green;
+  --nf-label-font-size:var(--nf-small-font-size);
+  --nf-label-color:#374151;
+  --nf-label-font-weight:500;
+  --nf-slider-track-background:#dfdfdf;
+  --nf-slider-track-height:0.25rem;
+  --nf-slider-thumb-size:calc(var(--nf-slider-track-height)*4);
+  --nf-slider-track-border-radius:var(--nf-slider-track-height);
+  --nf-slider-thumb-border-width:2px;
+  --nf-slider-thumb-border-focus-width:1px;
+  --nf-slider-thumb-border-color:#fff;
+  --nf-slider-thumb-background:var(--nf-input-focus-border-color);
+  display: block;
+  margin-top: calc(var(--nf-input-size)*1.5);
+  line-height: 1;
+  white-space: nowrap;
+  --switch-orb-size:var(--nf-input-size);
+  --switch-orb-offset:calc(var(--nf-input-border-width)*2);
+  --switch-width:calc(var(--nf-input-size)*2.5);
+  --switch-height:calc(var(--nf-input-size)*1.25 + var(--switch-orb-offset));
+}
+
+.nice-form-group > label {
+  font-weight: var(--nf-label-font-weight);
+  display: block;
+  color: var(--nf-label-color);
+  font-size: var(--nf-label-font-size);
+  font-family: var(--nf-label-font-family);
+  margin-bottom: calc(var(--nf-input-size)/2);
+  white-space: normal;
+}
+
+.nice-form-group > label + small {
+  font-style: normal;
+}
+
+.nice-form-group small {
+  font-family: var(--nf-input-font-family);
+  display: block;
+  font-weight: 400;
+  opacity: 0.75;
+  font-size: var(--nf-small-font-size);
+  margin-bottom: calc(var(--nf-input-size)*0.75);
+}
+
+.nice-form-group small:last-child {
+  margin-bottom: 0;
+}
+
+.nice-form-group > legend {
+  font-weight: var(--nf-label-font-weight);
+  display: block;
+  color: var(--nf-label-color);
+  font-size: var(--nf-label-font-size);
+  font-family: var(--nf-label-font-family);
+  margin-bottom: calc(var(--nf-input-size)/5);
+}
+
+.nice-form-group > .nice-form-group {
+  margin-top: calc(var(--nf-input-size)/2);
+}
+
+.nice-form-group > input[type=checkbox], .nice-form-group > input[type=date], .nice-form-group > input[type=email], .nice-form-group > input[type=month], .nice-form-group > input[type=number], .nice-form-group > input[type=password], .nice-form-group > input[type=radio], .nice-form-group > input[type=search], .nice-form-group > input[type=tel], .nice-form-group > input[type=text], .nice-form-group > input[type=time], .nice-form-group > input[type=url], .nice-form-group > input[type=week], .nice-form-group > select, .nice-form-group > textarea {
+  background: var(--nf-input-background-color);
+  font-family: inherit;
+  font-size: var(--nf-input-font-size);
+  border-bottom-width: var(--nf-input-border-width);
+  font-family: var(--nf-input-font-family);
+  box-shadow: none;
+  border-radius: var(--nf-input-border-radius);
+  border: var(--nf-input-border-width) var(--nf-input-border-style) var(--nf-input-border-color);
+  border-bottom: var(--nf-input-border-bottom-width) var(--nf-input-border-style) var(--nf-input-border-color);
+  color: var(--nf-input-color);
+  width: 100%;
+  padding: calc(var(--nf-input-size)*0.75);
+  height: calc(var(--nf-input-size)*2.75);
+  line-height: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  transition: all 0.15s ease-out;
+  --icon-padding:calc(var(--nf-input-size)*2.25);
+  --icon-background-offset:calc(var(--nf-input-size)*0.75);
+}
+
+.nice-form-group > input[type=checkbox]:required:not(:-moz-placeholder-shown):invalid, .nice-form-group > input[type=date]:required:not(:-moz-placeholder-shown):invalid, .nice-form-group > input[type=email]:required:not(:-moz-placeholder-shown):invalid, .nice-form-group > input[type=month]:required:not(:-moz-placeholder-shown):invalid, .nice-form-group > input[type=number]:required:not(:-moz-placeholder-shown):invalid, .nice-form-group > input[type=password]:required:not(:-moz-placeholder-shown):invalid, .nice-form-group > input[type=radio]:required:not(:-moz-placeholder-shown):invalid, .nice-form-group > input[type=search]:required:not(:-moz-placeholder-shown):invalid, .nice-form-group > input[type=tel]:required:not(:-moz-placeholder-shown):invalid, .nice-form-group > input[type=text]:required:not(:-moz-placeholder-shown):invalid, .nice-form-group > input[type=time]:required:not(:-moz-placeholder-shown):invalid, .nice-form-group > input[type=url]:required:not(:-moz-placeholder-shown):invalid, .nice-form-group > input[type=week]:required:not(:-moz-placeholder-shown):invalid, .nice-form-group > select:required:not(:-moz-placeholder-shown):invalid, .nice-form-group > textarea:required:not(:-moz-placeholder-shown):invalid {
+  background-color: var(--nf-invalid-input-background-color);
+  border-bottom-color: var(--nf-valid-input-border-color);
+  border-color: var(--nf-valid-input-border-color) var(--nf-valid-input-border-color) var(--nf-invalid-input-border-bottom-color);
+  color: var(--nf-invalid-input-color);
+}
+
+.nice-form-group > input[type=checkbox]:required:not(:-ms-input-placeholder):invalid, .nice-form-group > input[type=date]:required:not(:-ms-input-placeholder):invalid, .nice-form-group > input[type=email]:required:not(:-ms-input-placeholder):invalid, .nice-form-group > input[type=month]:required:not(:-ms-input-placeholder):invalid, .nice-form-group > input[type=number]:required:not(:-ms-input-placeholder):invalid, .nice-form-group > input[type=password]:required:not(:-ms-input-placeholder):invalid, .nice-form-group > input[type=radio]:required:not(:-ms-input-placeholder):invalid, .nice-form-group > input[type=search]:required:not(:-ms-input-placeholder):invalid, .nice-form-group > input[type=tel]:required:not(:-ms-input-placeholder):invalid, .nice-form-group > input[type=text]:required:not(:-ms-input-placeholder):invalid, .nice-form-group > input[type=time]:required:not(:-ms-input-placeholder):invalid, .nice-form-group > input[type=url]:required:not(:-ms-input-placeholder):invalid, .nice-form-group > input[type=week]:required:not(:-ms-input-placeholder):invalid, .nice-form-group > select:required:not(:-ms-input-placeholder):invalid, .nice-form-group > textarea:required:not(:-ms-input-placeholder):invalid {
+  background-color: var(--nf-invalid-input-background-color);
+  border-bottom-color: var(--nf-valid-input-border-color);
+  border-color: var(--nf-valid-input-border-color) var(--nf-valid-input-border-color) var(--nf-invalid-input-border-bottom-color);
+  color: var(--nf-invalid-input-color);
+}
+
+.nice-form-group > input[type=checkbox]:required:not(:placeholder-shown):invalid, .nice-form-group > input[type=date]:required:not(:placeholder-shown):invalid, .nice-form-group > input[type=email]:required:not(:placeholder-shown):invalid, .nice-form-group > input[type=month]:required:not(:placeholder-shown):invalid, .nice-form-group > input[type=number]:required:not(:placeholder-shown):invalid, .nice-form-group > input[type=password]:required:not(:placeholder-shown):invalid, .nice-form-group > input[type=radio]:required:not(:placeholder-shown):invalid, .nice-form-group > input[type=search]:required:not(:placeholder-shown):invalid, .nice-form-group > input[type=tel]:required:not(:placeholder-shown):invalid, .nice-form-group > input[type=text]:required:not(:placeholder-shown):invalid, .nice-form-group > input[type=time]:required:not(:placeholder-shown):invalid, .nice-form-group > input[type=url]:required:not(:placeholder-shown):invalid, .nice-form-group > input[type=week]:required:not(:placeholder-shown):invalid, .nice-form-group > select:required:not(:placeholder-shown):invalid, .nice-form-group > textarea:required:not(:placeholder-shown):invalid {
+  background-color: var(--nf-invalid-input-background-color);
+  border-bottom-color: var(--nf-valid-input-border-color);
+  border-color: var(--nf-valid-input-border-color) var(--nf-valid-input-border-color) var(--nf-invalid-input-border-bottom-color);
+  color: var(--nf-invalid-input-color);
+}
+
+.nice-form-group > input[type=checkbox]:required:not(:-moz-placeholder-shown):invalid:focus, .nice-form-group > input[type=date]:required:not(:-moz-placeholder-shown):invalid:focus, .nice-form-group > input[type=email]:required:not(:-moz-placeholder-shown):invalid:focus, .nice-form-group > input[type=month]:required:not(:-moz-placeholder-shown):invalid:focus, .nice-form-group > input[type=number]:required:not(:-moz-placeholder-shown):invalid:focus, .nice-form-group > input[type=password]:required:not(:-moz-placeholder-shown):invalid:focus, .nice-form-group > input[type=radio]:required:not(:-moz-placeholder-shown):invalid:focus, .nice-form-group > input[type=search]:required:not(:-moz-placeholder-shown):invalid:focus, .nice-form-group > input[type=tel]:required:not(:-moz-placeholder-shown):invalid:focus, .nice-form-group > input[type=text]:required:not(:-moz-placeholder-shown):invalid:focus, .nice-form-group > input[type=time]:required:not(:-moz-placeholder-shown):invalid:focus, .nice-form-group > input[type=url]:required:not(:-moz-placeholder-shown):invalid:focus, .nice-form-group > input[type=week]:required:not(:-moz-placeholder-shown):invalid:focus, .nice-form-group > select:required:not(:-moz-placeholder-shown):invalid:focus, .nice-form-group > textarea:required:not(:-moz-placeholder-shown):invalid:focus {
+  background-color: var(--nf-input-background-color);
+  border-color: var(--nf-input-border-color);
+  color: var(--nf-input-color);
+}
+
+.nice-form-group > input[type=checkbox]:required:not(:-ms-input-placeholder):invalid:focus, .nice-form-group > input[type=date]:required:not(:-ms-input-placeholder):invalid:focus, .nice-form-group > input[type=email]:required:not(:-ms-input-placeholder):invalid:focus, .nice-form-group > input[type=month]:required:not(:-ms-input-placeholder):invalid:focus, .nice-form-group > input[type=number]:required:not(:-ms-input-placeholder):invalid:focus, .nice-form-group > input[type=password]:required:not(:-ms-input-placeholder):invalid:focus, .nice-form-group > input[type=radio]:required:not(:-ms-input-placeholder):invalid:focus, .nice-form-group > input[type=search]:required:not(:-ms-input-placeholder):invalid:focus, .nice-form-group > input[type=tel]:required:not(:-ms-input-placeholder):invalid:focus, .nice-form-group > input[type=text]:required:not(:-ms-input-placeholder):invalid:focus, .nice-form-group > input[type=time]:required:not(:-ms-input-placeholder):invalid:focus, .nice-form-group > input[type=url]:required:not(:-ms-input-placeholder):invalid:focus, .nice-form-group > input[type=week]:required:not(:-ms-input-placeholder):invalid:focus, .nice-form-group > select:required:not(:-ms-input-placeholder):invalid:focus, .nice-form-group > textarea:required:not(:-ms-input-placeholder):invalid:focus {
+  background-color: var(--nf-input-background-color);
+  border-color: var(--nf-input-border-color);
+  color: var(--nf-input-color);
+}
+
+.nice-form-group > input[type=checkbox]:required:not(:placeholder-shown):invalid:focus, .nice-form-group > input[type=date]:required:not(:placeholder-shown):invalid:focus, .nice-form-group > input[type=email]:required:not(:placeholder-shown):invalid:focus, .nice-form-group > input[type=month]:required:not(:placeholder-shown):invalid:focus, .nice-form-group > input[type=number]:required:not(:placeholder-shown):invalid:focus, .nice-form-group > input[type=password]:required:not(:placeholder-shown):invalid:focus, .nice-form-group > input[type=radio]:required:not(:placeholder-shown):invalid:focus, .nice-form-group > input[type=search]:required:not(:placeholder-shown):invalid:focus, .nice-form-group > input[type=tel]:required:not(:placeholder-shown):invalid:focus, .nice-form-group > input[type=text]:required:not(:placeholder-shown):invalid:focus, .nice-form-group > input[type=time]:required:not(:placeholder-shown):invalid:focus, .nice-form-group > input[type=url]:required:not(:placeholder-shown):invalid:focus, .nice-form-group > input[type=week]:required:not(:placeholder-shown):invalid:focus, .nice-form-group > select:required:not(:placeholder-shown):invalid:focus, .nice-form-group > textarea:required:not(:placeholder-shown):invalid:focus {
+  background-color: var(--nf-input-background-color);
+  border-color: var(--nf-input-border-color);
+  color: var(--nf-input-color);
+}
+
+
+
+.nice-form-group > input[type=file], .wide-area {
+  background: rgba(0, 0, 0, 0.025);
+  padding: var(--nf-input-size);
+  display: block;
+  width: fit-content;
+  border-radius: var(--nf-input-border-radius);
+  border: 1px dashed var(--nf-input-border-color);
+  outline: none;
+  cursor: pointer;
+}
+
+.nice-form-group > input[type=file]:focus, .nice-form-group > input[type=file]:hover {
+  border-color: var(--nf-input-focus-border-color);
+}
+
+.nice-form-group > input[type=file]::file-selector-button {
+  background: var(--nf-input-focus-border-color);
+  background: red!important;
+  border: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0.5rem;
+  border-radius: var(--nf-input-border-radius);
+  color: #fff;
+  margin-right: 1rem;
+  outline: none;
+  font-family: var(--nf-input-font-family);
+  cursor: pointer;
+}
+
+.nice-form-group > input[type=file]::-webkit-file-upload-button {
+  background: var(--nf-input-focus-border-color);
+  border: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  padding: 0.5rem;
+  border-radius: var(--nf-input-border-radius);
+  color: #fff;
+  margin-right: 1rem;
+  outline: none;
+  font-family: var(--nf-input-font-family);
+  cursor: pointer;
+}
+
+.nice-form-group > select {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-down'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-position: right calc(var(--nf-input-size)*0.75) bottom 50%;
+  background-repeat: no-repeat;
+  background-size: var(--nf-input-size);
+}
+
+*, :after, :before {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f3f0e7;
+  font-family: Roboto, sans-serif;
+  color: #4b5563;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.demo-page {
+  margin: 0 auto;
+  display: flex;
+}
+
+@media (min-width: 800px) {
+  .demo-page{
+    max-width: 55em;
+  }
+}
+@media (max-width: 800px) {
+  .demo-page{
+    width: 100%;
+  }
+}
+
+.demo-page .demo-page-navigation {
+  width: 18em;
+  padding: 2em 1em;
+}
+
+
+.demo-page .demo-page-navigation nav {
+  position: sticky;
+  top: 2em;
+  background: #fff;
+  padding: 0.5em;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.demo-page .demo-page-navigation a {
+  display: flex;
+  padding: 0.75em 1em;
+  text-decoration: none;
+  border-radius: 0.25em;
+  color: #374151;
+  align-items: center;
+}
+
+.demo-page .demo-page-navigation a:hover {
+  background: #f3f4f6;
+}
+
+.demo-page .demo-page-navigation a svg {
+  width: 1.25em;
+  height: 1.25em;
+  margin-right: 1em;
+  color: #1f2937;
+}
+
+.demo-page .demo-page-content {
+  padding: 2em 1em;
+  max-width: 100%;
+}
+
+footer {
+  text-align: center;
+  margin: 2.5em 0;
+}
+
+.href-target {
+  position: absolute;
+  top: -2em;
+}
+
+.to-repo, .to-reset {
+  display: inline-flex;
+  background: #24292e;
+  color: #fff;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  align-items: center;
+  transition: background 0.2s ease-out;
+}
+
+.to-repo:hover, .to-reset:hover {
+  background: #000;
+}
+
+.to-repo svg, .to-reset svg {
+  width: 1.125rem;
+  height: 1.125rem;
+  margin-right: 0.75em;
+}
+
+.to-reset {
+  background: #3b4ce2;
+}
+
+.to-reset:hover {
+  /* background: #2538df; */
+}
+
+section {
+  background: #fff;
+  padding: 2em;
+  border-radius: 0.75rem;
+  line-height: 1.6;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  position: relative;
+  font-size: 0.875rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+section h1 {
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: #000;
+  margin-bottom: 0.75rem;
+}
+
+section h1 svg {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  vertical-align: -10%;
+  margin-right: 0.25em;
+}
+
+section h1.package-name {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  margin-top: -0.5rem;
+}
+
+section strong {
+  font-weight: 500;
+  color: #000;
+}
+
+section p {
+  margin: 0.5rem 0 1.5rem;
+}
+
+section p a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #3b4ce2;
+}
+
+section p:last-child {
+  margin-bottom: 0;
+}
+
+section code {
+  font-weight: 500;
+  font-family: Consolas, monaco, monospace;
+  position: relative;
+  z-index: 1;
+  margin: 0 2px;
+  background: #f3f4f4;
+  content: "";
+  border-radius: 3px;
+  padding: 2px 5px;
+  white-space: nowrap;
+}
+
+section ul {
+  margin-top: 0.5em;
+  padding-left: 1em;
+  list-style-type: disc;
+}
+
+details {
+  background: #f1f1f1;
+  margin: 2em -2em -2em;
+  padding: 1.5em 2em;
+}
+
+details .gist {
+  margin-top: 1.5em;
+}
+
+details .toggle-code, .logout {
+  display: inline-block;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.875rem;
+  background: #10b981;
+  background-color: red;
+  top: 1em;
+  right: 1em;
+  color: #fff;
+  font-weight: 500;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  cursor: pointer;
+}
+
+details .toggle-code:hover {
+  /* background: #0ea271; */  
+}
+
+details .toggle-code svg {
+  display: inline-block;
+  vertical-align: -15%;
+  margin-right: 0.25em;
+}
+
+details summary {
+  outline: none;
+  list-style-type: none;
+}
+
+details summary::marker {
+  display: none;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+/* custome styles */
+.title{
+  color: red;
+  font-weight: bold;
+}
+
+.amh-title{
+  background-color: red;
+  color: white;
+}
+
+.package-name{
+  text-align: center;
+}
+.demo-page-navigation{
+  position: relative;
+}
+.demo-page-navigation ul {
+  height: 30rem;
+  /* background-color: red; */
+}
+.demo-page-navigation ul li a {
+  color: red!important;
+}
+.to-reset{
+  background-color: red;
+}
+#flag {
+  display: grid;
+  border-radius: .3rem;
+  /* border: 1px solid red; */
+}
+.small-title{
+  text-align: center;
+  line-height: 1.5;
+  font-weight: bold;
+}
+#flag img{
+  margin-inline: auto;
+  max-width: 100%;
+  height: 5rem ;
+}
+.text-random{
+  color: black;
+  font-size: .9rem;
+  line-height: 1.5;
+  text-align: center;
+}
+.user-info{
+  list-style: none;
+}
+.user-name{
+  font-weight: bold;
+  font-size: 1.25em;
+}
+.user-image{
+  width: 10rem!important;
+  height: 12rem!important;
+  border: 2px solid white;
+  border-radius: .3rem;
+  object-fit: cover;
+}
+.left-thing{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.center {
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(.8);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: start; */
+}
+.center svg.fingerprint path.clone {
+  animation-timeline: view();
+  transition: stroke-dashoffset 2s ease-out;
+  -webkit-animation: try 2.5s ease-out;
+  animation: try 2.5s ease-out;
+}
+.center svg.fingerprint.active {
+  transform: scale(0.97);
+}
+.center svg.fingerprint.active path.clone {
+  stroke-dashoffset: 0;
+}
+.center h1 {
+  font-size: 30px;
+  /* transform: translateY(-50px); */
+}
+.scan,
+.scan-success {
+  font-size: 15px;
+  text-align: center;
+  /* transform: translateY(50px); */
+  color: #666;
+}
+.scan-success {
+  display: none;
+}
+.center .fingerprint,
+.center .icon-success {
+  width: fit-content;
+  margin: auto;
+  height: 135px;
+  overflow: visible;
+}
+.wide-area{
+  z-index: 99;
+  position: relative;
+}
+.center .icon-success {
+  transform: translateY(-50%);
+  width: 100%;
+}
+.center .icon-success circle {
+  transform-origin: 50% 50%;
+  transform: scale(0);
+  transition: transform 200ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+.center .icon-success path {
+  opacity: 0;
+  transition: stroke-dashoffset 350ms 100ms ease;
+}
+.center.success .fingerprint {
+  transform: scale(0);
+}
+.center.success .icon-success circle {
+  transform: scale(.75);
+}
+.center.success .icon-success path {
+  stroke-dashoffset: 0;
+  opacity: 1;
+  transition: opacity 0s, stroke-dashoffset 0.5s;
+}
+.center.success .scan {
+  display: none;
+  text-align: center;
+}
+.center.success .scan-success {
+  display: block;
+  text-align: center;
+}
+
+@-webkit-keyframes try {
+  0%,
+  100% {
+    stroke-dashoffset: 178;
+  }
+  50% {
+    stroke-dashoffset: 100;
+  }
+}
+@keyframes try {
+  0%,
+  100% {
+    stroke-dashoffset: 178;
+  }
+  50% {
+    stroke-dashoffset: 100;
+  }
+}
+
+.abs-image{
+  position: fixed;
+  left: 5%;
+  top: 50%;
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+}
+
+#flag img{
+  border: 5px solid white;
+}
+
+.abs-image img{
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+.sbt{
+  background-color: red;
+  color: white;
+  border: none;
+}
+@media only screen and (min-width: 800px) {
+  .demo-page .demo-page-content {
+    width: calc(100% - 18em);
+    scale :(1.5);
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .demo-page .demo-page-navigation {
+    display: none!important;
+  }
+  .demo-page{
+    justify-content: center;
+    max-width: 100%!important;
+  }
+}
+
+.footer{
+  width: fit-content;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+label{
+  /* font-weight: bold!important; */
+  font-size: 1.1rem!important;
+}
+input[type=text]{
+  border-radius: 3px;
+  /* background: rgb(51, 0, 0)!important; */
+  color: white!important;
+  color: var(--nf-label-color)!important;
+  color: rgb(2, 52, 2)!important;
+  /* border: none!important; */
+  padding: 2rem 0.5rem 1.5rem .5rem!important;
+  font-size: 1.1rem!important;
+}
+
+.section{
+  position: relative;
+}
+.absolute-flag-cont{
+  display: flex;
+  justify-content: space-around;
+  justify-content: center;
+  gap: 1rem;
+  bbackground-color: red;
+  margin-bottom: 1rem;
+}
+.eth {
+  scale: .8;
+}
+.top-flag{
+  width: 100%;
+  position: ;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  left: ;
+  margin: auto;
+  object-fit: cover;
+}
+.absolute-flag-can{
+  top: 40%;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+  opacity: .25;
+  object-fit: cover;
+  width: 10rem;
+  height: 10rem;
+  position: absolute ;
+  border-radius: 50%;
+}
+
+.fnp{
+  top: 10%!important;
+}
+
+.canada-svg{
+  width: fit-content;
+  height: 3rem;
+  object-fit: cover;
+}
